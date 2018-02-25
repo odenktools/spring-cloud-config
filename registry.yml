@@ -3,10 +3,8 @@ spring:
     name: registry
   cloud:
     config:
-      uri: http://config:9999
+      uri: http://localhost:8888
       fail-fast: true
-      password: root
-      username: s3cr3t
 server:
   port: 8761
 eureka:
@@ -16,6 +14,6 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://config:9999/eureka/
+      defaultZone: http://localhost:8888/eureka/
     server:
       waitTimeInMsWhenSyncEmpty: 0
